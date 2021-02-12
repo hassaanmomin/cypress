@@ -3,6 +3,15 @@ orbs:
   # import Cypress orb by specifying an exact version x.y.z
   # or the latest version 1.x.x using "@1" syntax
   cypress: cypress-io/cypress@1
+  slack: circleci/slack@4.1
+
+jobs:
+  notify:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - slack/notify:
+          event: always
 workflows:
   build:
     jobs:
@@ -11,5 +20,9 @@ workflows:
       - cypress/run:
           record: true
           store_artifacts: true
+  send-notification:
+    jobs:
+      - notify:
+          context: slack-secrets
 
 
