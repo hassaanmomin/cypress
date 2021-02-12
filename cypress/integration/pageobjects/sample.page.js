@@ -49,8 +49,6 @@ class sample {
       .type(p)
       .should('have.value', p);
   }
-  
-  
 }
 
 module.exports = new sample();
