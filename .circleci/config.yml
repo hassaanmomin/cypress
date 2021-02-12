@@ -13,9 +13,11 @@ jobs:
       - slack/notify:
           event: fail
           template: basic_fail_1
+          channel: 'cypress-test-results'
       - slack/notify:
           event: pass
-          template: success_tagged_deploy_1   
+          template: success_tagged_deploy_1
+          channel: 'cypress-test-results'   
 workflows:
   build:
     jobs:
