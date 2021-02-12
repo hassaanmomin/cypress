@@ -20,8 +20,6 @@ workflows:
       - cypress/run:
           record: true
           store_artifacts: true
-  send-notification:
-    jobs:
       - notify:
           context: slack-secrets
 
