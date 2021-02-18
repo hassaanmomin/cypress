@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-const sample = require('../pageobjects/sample.page');
+const sample = require('../../pageobjects/sample.page');
 
 describe('My First Test', () => {
     it('Netflix - Gets, types and asserts', () => {
