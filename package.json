@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/cypress run --browser chrome --spec 'cypress/integration/tests/sample.spec.js'",
+    "test": "node_modules/.bin/cypress run --browser chrome --spec 'cypress/integration/sample.spec.js'",
     "cypress:report": "generate-mochawesome-report"
   },
   "author": "Hassaan Momin",
